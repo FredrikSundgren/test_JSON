@@ -74,39 +74,57 @@ fetch('./img.json')
         const btnPrev = document.querySelector('.btnPrev')
         const btnNext = document.querySelector('.btnNext')
         const imgArray = []
-        let i = 0;
 
         jsonImages.forEach(images => {
             imgArray.push(images.url)
         });
-        btnPrev.addEventListener('click', () => prev())
-        btnNext.addEventListener('click', () => next())
+        btnPrev.addEventListener('click', (e) => prev(e))
+        btnNext.addEventListener('click', (e) => next(e))
 
-        function prev() {
-            if (i <= 0) i = imgArray.length;
-            i--;
-            return setImg()
+        function prev(e) {
+            console.log("e", e);
+            console.log(e.path[2].children[1].currentSrc);
+
+            const imageUrl = e.path[2].children[1].currentSrc;
+            const sliced = imageUrl.slice(22);
+            console.log("sliced", sliced);
+            let indexOfImg = imgArray.findIndex(image => image === sliced);
+            console.log("imgArray", imgArray);
+            console.log("index", indexOfImg);
+            if (indexOfImg <= 0) indexOfImg = imgArray.length;
+            indexOfImg--;
+            return setImg(indexOfImg)
         }
 
-        function next() {
-            if (i >= imgArray.length - 1) i = -1;
-            i++;
-            return setImg()
+        function next(e) {
+            console.log("e", e);
+            console.log(e.path[2].children[1].currentSrc);
+
+            const imageUrl = e.path[2].children[1].currentSrc;
+            const sliced = imageUrl.slice(22);
+            console.log("sliced", sliced);
+            let indexOfImg = imgArray.findIndex(image => image === sliced);
+            console.log("imgArray", imgArray);
+            console.log("index", indexOfImg);
+            if (indexOfImg >= imgArray.length - 1) indexOfImg = -1;
+            indexOfImg++;
+            return setImg(indexOfImg)
         }
 
-        function setImg() {
+        function setImg(index) {
+            console.log("index i setImg", index);
             console.log('setImg');
-            return popupImage.setAttribute('src', imgArray[i])
-
-
+            const imagePoppedUp = jsonImages.find(images => images.url === imgArray[index]);
+            console.log("imagePoppedUp", imagePoppedUp);
+            popupImage.setAttribute('src', imgArray[index])
+            descDiv.innerHTML = `<p>${imagePoppedUp.description}</p>`
         }
 
         function showText(id) {
-            const imgObj = jsonImages.find(({
-                image
-            }) => image === id)
-            console.log(imgObj);
-            return descDiv.insertAdjacentHTML('afterbegin', `<p>${imgObj.description}</p>`)
-
+            console.log(jsonImages);
+            console.log(id);
+            const imgObj = jsonImages.find(image => image.id === id);
+            console.log("imgObj", imgObj);
+            return descDiv.innerHTML = `<p>${imgObj.description}</p>`
         }
     })
