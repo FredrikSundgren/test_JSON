@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Blomma",
+    "url": "images/gall_pic_1.jpg",
+    "alt": "Vacker rödrosa blomma",
+    "id": "image1",
+    "description": "Det är en vacker rödrosa blomma med en fin blå bakgrund"
+  },
+  {
+    "title": "Glaciär",
+    "url": "images/gall_pic_2.jpg",
+    "alt": "En gnistrande glaciär",
+    "id": "image2",
+    "description": "En gnistrande glaciär "
+  },
+  {
+    "title": "Vattenfall",
+    "url": "images/gall_pic_3.jpg",
+    "alt": "Vattenfall",
+    "id": "image3",
+    "description": "Ett underbart fint vattenfall i en Amazonas "
+  },
+  {
+    "title": "Strand",
+    "url": "images/gall_pic_4.jpg",
+    "alt": "Skymning på en vacker strand",
+    "id": "image4",
+    "description": "Skymning på en vacker strand"
+  },
+  {
+    "title": "Vattenfall 2",
+    "url": "images/gall_pic_5.jpg",
+    "alt": "Vattenfall",
+    "id": "image5",
+    "description": "Ett fint vattenfall bland klipporna i Nya Zeeland"
+  },
+  {
+    "title": "Vattenfall 3",
+    "url": "images/gall_pic_6.jpg",
+    "alt": "Vattenfall",
+    "id": "image6",
+    "description": "Ett underbart vattenfall i en skog "
+  },
+  {
+    "title": "Val",
+    "url": "images/gall_pic_7.jpg",
+    "alt": " blåval",
+    "id": "image7",
+    "description": "En fena på en blåval "
+  },
+  {
+    "title": "Skymning",
+    "url": "images/gall_pic_8.jpg",
+    "alt": "Skymning i Sahara",
+    "id": "image8",
+    "description": "Skymning i Sahara öknen"
+  },
+  {
+    "title": "Planta",
+    "url": "images/gall_pic_9.jpg",
+    "alt": "Grön planta",
+    "id": "image9",
+    "description": "En vacker grön planta i någon mystisk regnskog"
+  },
+  {
+    "title": "Lava",
+    "url": "images/gall_pic_10.jpg",
+    "alt": "Vulkanutbrott",
+    "id": "image10",
+    "description": "Vulkanutbrott på Island "
+  }
+]

@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(white, black);
+}
+.container h1 {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  padding: 15px;
+  color: #333;
+  text-align: center;
+  text-transform: capitalize;
+}
+.container .imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 5px;
+}
+.container .imageContainer .images {
+  height: 250px;
+  width: 350px;
+  border: 10px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .imageContainer .images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.container .imageContainer .images:hover img {
+  filter: none;
+  transform: scale(1.1);
+}
+
+.container .popupImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+.container .popupImage span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+.container .popupImage img {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 750px;
+  object-fit: cover;
+}
+.images {
+  filter: grayscale();
+}
+.images:hover {
+  filter: none;
+}
+@media (max-width: 768px) {
+  .container .popup-image img {
+    width: 95%;
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  padding-top: 2%;
+}
+.btnPrev {
+  padding: 1%;
+  width: 150px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btnPrev:hover {
+  transition: 0.1s linear;
+  transform: scale(1.15);
+  background: linear-gradient(rgb(230, 0, 251), black);
+}
+.btnNext {
+  padding: 1%;
+
+  width: 150px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btnNext:hover {
+  transition: 0.1s linear;
+  transform: scale(1.15);
+  background: linear-gradient(rgb(230, 0, 251), black);
+}
+.descDiv {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+}
+.description;
