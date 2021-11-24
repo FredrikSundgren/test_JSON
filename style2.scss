@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(white, black);
+
+  h1 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    padding: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 5px;
+
+    .images {
+      border: 10px solid rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      cursor: pointer;
+      filter: grayscale(80%);
+      transition: 0.2s ease-in;
+
+      &:hover {
+        filter: none;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .popupImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 60px;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      border: 5px solid #fff;
+      border-radius: 5px;
+      height: 70vh;
+
+      @media (max-width: 768px) {
+        width: 95%;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      padding-top: 2%;
+    }
+
+    .btnPrev,
+    .btnNext {
+      padding: 1%;
+      width: 150px;
+      background: none;
+      color: #fff;
+      border: 2px solid #fff;
+      font-family: serif;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.1s linear;
+        transform: scale(1.15);
+        background: linear-gradient(rgb(230, 0, 251), black);
+      }
+    }
+
+    .descDiv {
+      color: white;
+      position: absolute;
+      right: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      bottom: 7%;
+      margin: auto;
+      font-size: 2rem;
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
